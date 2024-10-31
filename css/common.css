@@ -6,7 +6,24 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  /* outline-style: none; */
+}
+
+a {
+  color: #1e1e1e;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  /* <li></li> 태그 사용시 자동 생성되는 구분 기호를 없앰 */
+  list-style: none;
+}
+
+html {
+  font-size: 14px;
+  /* 가로 스크롤바 숨김 */
+  overflow-x: hidden;
 }
 
 body {
