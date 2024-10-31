@@ -1,72 +1,66 @@
-# 카카오 브레인 블로그
+# 카드리스트 만들기
 
-## 1. css
+## 1. 주의 사항
 
-- 영역에 이미지가 가운데 정렬되면서 보이도록 처리
-  > 단점 : 이미지 일부가 가려짐
-
-```css
-img {
-  object-fit: cover;
-}
+```
+* a 태그는 너비와 높이를 줄 수 없음
+> 초기값이 display: inline
 ```
 
-- 영역에 이미지 모두 보이도록 처리
-  > 단점 : 공백이 존재
-
-```css
-img {
-  object-fit: contain;
-}
+```
+* span 태그는 너비와 높이를 줄 수 없음
+> 초기값이 display: inline
 ```
 
-## 2. css 에서 글꼴 읽어오기
+```
+a 태그에 width, height, margin, padding 등을 주려면
+display: block 으로 바꿔준다.
 
-- 사이트 작업 진행 전에 반드시 글꼴에 대해서 준비를 해야함
-- 디자이너에게 글꼴을 명시받아야 함
-- 웹용 폰트 즉, 웹브라우저용 폰트는 온라인 에서 구함
-- 웹용 폰트가 없으면 우리가 만들어서 사용함
-
-### 2.1. 구글 폰트
-
-- https://fonts.google.com/
-- 글꼴 배치 순서에 유의
-- Get Font 에서 @import 를 활용한다
-
-### 2.2. 눈누
-
-- https://noonnu.cc/
-- '웹폰트로 사용'에서 소스 코드를 복사해서 활용
-
-### 2.3. 글꼴 활용이 좋은 에이전시 참고용
-
-- https://www.webtro.co.kr/
-- https://www.gdweb.co.kr/main/
-
-## 3. 글꼴은 common.css 에 작성
-
-- 모든 페이지에 적용될 공통 css 파일
-
-```css
-@charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  /* outline-style: none; */
-}
+tip! display: flex 로 바꿔준다.
 ```
 
-```css
-body {
-  font-family: "Inter", "Noto Sans KR", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-optical-sizing: auto;
-  color: #1e1e1e;
-  font-size: 14px;
-}
+## 2. 정말 중요한 내용
+
+### 2.1. position 을 필수로 이해해야 함
+
+#### 2.1.2. position: fixed
+
 ```
+웹 브라우저 기준으로 위치 고정
+스크롤이 되어도, 화면이 넓어도, 화면이 좁아도, 화면이 짧아도 위치 고정
+```
+
+- 주의사항
+
+```
+position: fixed 를 사용하면 웹브라우저 기준이라서
+화면에 보이는 내용의 레이아웃에서 높이가 반영 안됨.
+```
+
+> position: fixed 상태에서는 width, height, background-color 등 설정 필요
+
+> 웹브라우저 기준으로 top, bottom, left, right 도 설정 필요
+
+<br>
+
+```
+position: fixed 를 하면 우선 전체너비를 기준으로
+내용과 구분해 div 를 구성하는 것을 추천
+```
+
+```
+가장 위에 보이기 위해서는 z-index(z 축) 값을 높여야 함.
+```
+
+<br>
+
+#### 2.1.3. position: absolute
+
+- fixed 와 같지만 웹브라우저가 아닌 body 를 기준으로 한다.
+- 기준이 되길 원하는 tag 의 css 에 position: relative 를
+  부여하면 그 곳이 기준이 된다.
+  <br>
+
+#### 2.1.4. position: relative
+
+- position: absolute 의 기준이 된다.
