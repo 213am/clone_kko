@@ -66,6 +66,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-optical-sizing: auto;
-  color: #000000;
+  color: #1e1e1e;
+  font-size: 14px;
 }
 ```
