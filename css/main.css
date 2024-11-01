@@ -1,26 +1,26 @@
 /* 메인 영역 */
 .main {
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
-  min-height: 600px;
   /* padding: 상하여백(0px) 좌우여백(auto) */
-  padding: 0px 15px;
+  margin: 0px auto;
+  min-height: 600px;
   margin-bottom: 60px;
-  margin-top: 67px;
+  margin-top: 100px;
 }
 
 .main .layout {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto;
+  max-width: 1180px;
+  padding: 0px 5px;
   justify-content: space-between;
 }
 
 .main-slide {
   display: flex;
-  gap: 20px;
-  padding-top: 10px;
+  gap: 30px;
+  /* padding-top: 10px; */
 }
 
 /* 왼쪽 영역  */
@@ -28,7 +28,6 @@
   width: 770px;
   height: 470px;
 }
-
 .visual-slide {
   width: 100%;
   height: 100%;
@@ -37,7 +36,6 @@
   /* 넘치는 부분은 숨겨라 */
   overflow: hidden;
 }
-
 /* visual-slide 태그 안의 a 태그 */
 /* a 태그에는 대부분의 스타일시트가 안 먹힘 */
 /* 이유는 display:inline; 이 기본설정이기 때문에 */
@@ -45,12 +43,10 @@
   width: 100%;
   height: 100%;
 }
-
 /* visual-slide 태그 안의 a 태그 안의 img 태그*/
 .visual-slide a img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
@@ -59,25 +55,21 @@
   width: 370px;
   height: 470px;
 }
-
 .card-slide {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
-
 /* card-slide 태그 안의 a 태그*/
 .card-slide a {
   width: 100%;
   height: 100%;
 }
-
 /* card-slide 태그 안의 a 태그 안의 img 태그*/
 .card-slide a img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
@@ -95,13 +87,13 @@
 }
 
 .list-title {
-  margin-bottom: 30px;
-  font-size: 24px;
   color: #1e1e1e;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 .list-thum-wrap {
-  margin-bottom: 45px;
+  margin-bottom: 100px;
 }
 
 .list {
@@ -152,20 +144,20 @@
 
 .thum-cate .AI {
   color: rgb(119, 56, 255);
-  font-size: 14px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .thum-cate .Krew {
   color: rgb(231, 0, 167);
-  font-size: 14px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .thum-title {
   color: rgb(30, 30, 30);
-  font-size: 20px;
   font-weight: 700;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
@@ -187,8 +179,8 @@
 }
 
 .banner a img {
-  max-width: 100%;
   height: 100%;
+  max-width: 100%;
   /* object-fit: contain; */
   object-fit: cover;
 }
@@ -215,19 +207,19 @@
   /* padding-left: 20px; */
   /* padding-right: 20px; */
   border: 1px solid #1e1e1e;
+  font-weight: 700;
   /* border-width: 1px; */
   /* border-style: solid; */
   /* border-color: #1e1e1e; */
   border-radius: 20px;
   background-color: #ffffff;
   cursor: pointer;
-  font-weight: 700;
   transition: background-color 0.5s, color 0.5s;
   /* transition: all 0.5s; */
   /* > 모든 효과에 0.5s 의 transition 을 주고 싶을 때 */
 }
 /* 마우스 커서가 올라갔을 때 */
 .bt:hover {
-  background-color: #1e1e1e;
   color: #ffffff;
+  background-color: #1e1e1e;
 }
