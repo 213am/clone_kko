@@ -1,0 +1,187 @@
+/* 내용 영역 */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.main-content .left {
+  width: 71.186vw;
+  max-width: 840px;
+}
+
+.list-new-wrap {
+}
+.list-title {
+  color: #1e1e1e;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.list-thum-wrap {
+  margin-bottom: 100px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.thum {
+  width: 22.033vw;
+  text-decoration: none;
+  max-width: 260px;
+}
+/* <a href="#" class="thum">에 마우스를 올리면 */
+/* <div class="thum-img">에 변화를 주겠다 */
+.thum:hover .thum-img {
+  /* 좌표 움직이기 */
+  transform: translateY(-12px);
+  /* 그림자 */
+  filter: drop-shadow(0px 20px 40px #bdc4d3);
+}
+.thum-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  transition: transform 0.5s, filter 0.4s;
+}
+.thum-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thum-cate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.thum-cate img {
+  width: 24px;
+  height: 24px;
+}
+.thum-cate .AI {
+  color: rgb(119, 56, 255);
+  font-weight: 600;
+  font-size: 14px;
+}
+.thum-cate .Krew {
+  color: rgb(231, 0, 167);
+  font-weight: 600;
+  font-size: 14px;
+}
+.thum-title {
+  color: rgb(30, 30, 30);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.thum-date {
+  color: rgb(204, 204, 204);
+}
+
+.banner {
+  width: 71.186vw;
+  height: 13.559vw;
+  max-width: 840px;
+  max-height: 160px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+.banner a {
+  width: 100%;
+  height: 100%;
+}
+.banner a img {
+  height: 100%;
+  max-width: 100%;
+  /* object-fit: contain; */
+  object-fit: cover;
+}
+
+.list-cate-wrap {
+}
+
+.list-title {
+  margin-bottom: 40px;
+}
+
+.list-thum-wrap {
+}
+
+.list-bt-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.bt {
+  padding: 11px 20px;
+  /* padding-top: 11px; */
+  /* padding-bottom: 11px; */
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+  border: 1px solid #1e1e1e;
+  font-weight: 700;
+  /* border-width: 1px; */
+  /* border-style: solid; */
+  /* border-color: #1e1e1e; */
+  border-radius: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  /* transition: all 0.5s; */
+  /* > 모든 효과에 0.5s 의 transition 을 주고 싶을 때 */
+}
+/* 마우스 커서가 올라갔을 때 */
+.bt:hover {
+  color: #ffffff;
+  background-color: #1e1e1e;
+}
+/* 
+@media screen and (max-width: 1120px) {
+  .thum {
+    max-width: 230px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .thum {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .thum {
+    max-width: 210px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .thum {
+    max-width: 200px;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  .main-content .left {
+    width: 100%;
+    max-width: 100%;
+  }
+  .list {
+    display: block;
+  }
+  .thum {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    transition: transform 0.5s, filter 0.4s;
+  }
+  .thum-img {
+    height: 740px;
+  }
+  .banner {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,84 @@
+.main-slide {
+  display: flex;
+  /* 30/1180 * 100 = 2.542... */
+  gap: 2.542vw;
+  /* padding-top: 10px; */
+}
+
+/* 왼쪽 영역  */
+.main-slide .left {
+  /* 770/1180 * 100 = 65.254... */
+  width: 65.254vw;
+  max-width: 770px;
+  /* 470/1180 * 100 - 39.830... */
+  /* width 대비 height 를 계산하기 위해서 vh 가 아닌 vw 를 사용 */
+  height: 39.83vw;
+  max-height: 470px;
+}
+.visual-slide {
+  width: 100%;
+  height: 100%;
+  /* 테두리를 둥글게 */
+  border-radius: 20px;
+  /* 넘치는 부분은 숨겨라 */
+  overflow: hidden;
+}
+/* visual-slide 태그 안의 a 태그 */
+/* a 태그에는 대부분의 스타일시트가 안 먹힘 */
+/* 이유는 display:inline; 이 기본설정이기 때문에 */
+.visual-slide a {
+  width: 100%;
+  height: 100%;
+}
+/* visual-slide 태그 안의 a 태그 안의 img 태그*/
+.visual-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 오른쪽 영역 */
+.main-slide .right {
+  /* 370/1180 * 100 = 31.355... */
+  width: 31.355vw;
+  max-width: 370px;
+  /* 470/1180 * 100 = 39.830... */
+  height: 39.83vw;
+  max-height: 470px;
+}
+.card-slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* card-slide 태그 안의 a 태그*/
+.card-slide a {
+  width: 100%;
+  height: 100%;
+}
+/* card-slide 태그 안의 a 태그 안의 img 태그*/
+.card-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 가로 너비 대비 세로가 평상시에도 변하게 하려면? */
+
+/* main-slide 반응형 */
+@media screen and (max-width: 1024px) {
+  .main-slide {
+    display: block;
+    gap: 0;
+    width: 100%;
+  }
+  .main-slide .left {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    max-height: 100%;
+  }
+  .main-slide .right {
+    display: none;
+  }
+}
