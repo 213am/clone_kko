@@ -9,13 +9,14 @@
   border-bottom: 1px solid #e6e5e6;
   z-index: 999;
   background-color: #ffffff;
+  display: block;
 }
 
 .header .layout {
   display: flex;
   height: 100%;
-  padding: 0px 5px;
-  margin: 0 15px;
+  padding: 0px 15px;
+  margin: 0 auto;
   align-items: center;
   /* 중앙 공간을 기준으로 좌우 끝으로 정렬 */
   justify-content: space-between;

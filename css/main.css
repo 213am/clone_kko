@@ -11,8 +11,8 @@
 }
 
 .main .layout {
-  padding: 0px 5px;
-  margin: 0px 15px;
+  padding: 0px 15px;
+  margin: 0px auto;
   max-width: 1180px;
   justify-content: space-between;
 }
