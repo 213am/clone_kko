@@ -6,16 +6,14 @@
 
 .footer-main {
   width: 100%;
-  height: 300px;
+  padding: 40px 0px;
 }
 .footer-main .layout {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   max-width: 1180px;
-  padding: 0px 5px;
-  padding-top: 40px;
-  padding-bottom: 64px;
+  padding: 0px 15px;
 }
 .footer-main .layout .left {
 }
@@ -96,7 +94,7 @@
 .footer-copy {
   width: 100%;
   height: 100px;
-  padding: 40px 0;
+  padding: 40px 15px;
   background-color: #191919;
 }
 .footer-copy .layout {
@@ -134,4 +132,16 @@
 .facebook {
   color: #666666;
   font-size: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-main .layout {
+    display: block;
+  }
+  .footer-main .layout .right {
+    margin-top: 40px;
+  }
+  .site-map-list {
+    width: 50%;
+  }
 }

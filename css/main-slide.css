@@ -63,7 +63,19 @@
   height: 100%;
   object-fit: cover;
 }
-/* 가로 너비 대비 세로가 평상시에도 변하게 하려면? */
+
+/* 하단 카드 슬라이드 */
+.mb-card-slide {
+  display: none;
+  margin-top: 60px;
+}
+/* js 로 변경 예정 */
+.mb-card-slide-wrap {
+  display: flex;
+}
+.mb-card-slide-wrap a {
+  margin-right: 20px;
+}
 
 /* main-slide 반응형 */
 @media screen and (max-width: 1024px) {
@@ -80,5 +92,17 @@
   }
   .main-slide .right {
     display: none;
+  }
+
+  .mb-card-slide {
+    display: block;
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  .mb-card-slide-wrap .list-card {
+    display: block;
+    width: 240px;
+    height: 266px;
   }
 }
