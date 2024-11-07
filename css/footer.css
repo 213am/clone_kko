@@ -75,6 +75,11 @@
   color: #999999;
   text-decoration: none;
 }
+.site-map-list li a:hover {
+  text-decoration: underline;
+  /* underline 이 문자와 겹치지 않도록 */
+  text-underline-position: under;
+}
 /* <태그 class="page"></태그> 속 내용의 시작점 */
 /* .page::before {
   content: "안녕";

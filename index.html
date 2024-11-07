@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
+    <!-- css 연결 -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -24,6 +25,10 @@
     <link rel="stylesheet" href="./css/main-content.css" />
     <link rel="stylesheet" href="./css/card-list.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <!-- javascript 연결 -->
+    <script src="./js/header.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/footer.js"></script>
   </head>
   <body>
     <!-- 먼저 레이아웃을 잡기위해 주석작성 및 div 를 사용한다. -->
@@ -41,7 +46,9 @@
             <img src="./images/etc/logo-kakao.png" alt="카카오블로그" />
           </a>
           <div class="header-logo-motion">
-            <img src="./images/etc/logo-blog01.png" alt="블로그 이미지" />
+            <a href="/">
+              <img src="./images/etc/logo-blog01.png" alt="블로그 이미지" />
+            </a>
           </div>
         </div>
         <!-- 메뉴 및 검색창 -->
@@ -50,7 +57,7 @@
           <a href="#">팀 & 크루</a>
           <a href="#">영입</a>
           <button id="search">
-            <img src="./images/icon/icon-search.png" alt="" />
+            <img src="./images/icon/icon-search.png" alt="검색버튼" />
           </button>
           <!-- 모바일 메뉴 -->
           <button id="mb-menu-bt">
@@ -361,24 +368,27 @@
             <div class="card-info">
               <div class="card-name">AI Healthcare</div>
               <div class="card-number">10</div>
-            </div> </a
-          ><a href="#" class="list-card">
+            </div>
+          </a>
+          <a href="#" class="list-card">
             <div class="card-img">
               <img src="./images/p1.png" alt="카테고리" />
             </div>
             <div class="card-info">
               <div class="card-name">AI Healthcare</div>
               <div class="card-number">10</div>
-            </div> </a
-          ><a href="#" class="list-card">
+            </div>
+          </a>
+          <a href="#" class="list-card">
             <div class="card-img">
               <img src="./images/p1.png" alt="카테고리" />
             </div>
             <div class="card-info">
               <div class="card-name">AI Healthcare</div>
               <div class="card-number">10</div>
-            </div> </a
-          ><a href="#" class="list-card">
+            </div>
+          </a>
+          <a href="#" class="list-card">
             <div class="card-img">
               <img src="./images/p1.png" alt="카테고리" />
             </div>
@@ -400,7 +410,7 @@
         <div class="layout">
           <div class="left">
             <div class="footer-logo">
-              <a class="#">
+              <a href="#">
                 <img
                   src="./images/etc/logo-kakao-footer.png"
                   alt="kakaobrain"
@@ -415,7 +425,7 @@
             </div>
             <div class="footer-link">
               <!-- <a target="_blank"></a> 는 새탭에서 링크 열기 -->
-              <a href="https://careers.kakaobrain.com/" target="_blank">
+              <a href="#" target="_blank">
                 <div>지원하러 가기</div>
               </a>
             </div>

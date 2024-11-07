@@ -132,7 +132,7 @@
   border-radius: 20px;
   background-color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
   /* transition: all 0.5s; */
   /* > 모든 효과에 0.5s 의 transition 을 주고 싶을 때 */
 }
