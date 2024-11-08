@@ -37,6 +37,22 @@
   object-fit: cover;
 }
 
+.visual-slide .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  margin: 0 2px;
+  opacity: 0.7;
+}
+.visual-slide .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  width: 20px;
+  border-radius: 5px;
+  opacity: 1 !important;
+}
+
 /* 오른쪽 영역 */
 .main-slide .right {
   /* 370/1180 * 100 = 31.355... */
@@ -68,13 +84,24 @@
 .mb-card-slide {
   display: none;
   margin-top: 60px;
+  overflow: hidden;
 }
+.mb-card-slide .swiper {
+  overflow: visible;
+}
+
 /* js 로 변경 예정 */
 .mb-card-slide-wrap {
   display: flex;
+  width: 1400px;
 }
 .mb-card-slide-wrap a {
-  margin-right: 20px;
+}
+.mb-card-slide-wrap .swiper-slide {
+  max-width: 265px;
+}
+.mb-card-slide-wrap .swiper-slide-active {
+  max-width: 265px;
 }
 
 /* main-slide 반응형 */

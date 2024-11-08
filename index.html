@@ -11,6 +11,12 @@
       type="image/x-icon"
     />
     <title>카카오브레인 Blog clone project</title>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" /> -->
     <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" /> -->
     <link
@@ -27,7 +33,10 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <!-- javascript 연결 -->
     <script src="./js/header.js"></script>
+    <script src="./js/slide-logo.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/slide-main.js"></script>
+    <script src="./js/slide-card.js"></script>
     <script src="./js/footer.js"></script>
   </head>
   <body>
@@ -45,10 +54,36 @@
           <a href="/" class="header-logo-link">
             <img src="./images/etc/logo-kakao.png" alt="카카오블로그" />
           </a>
-          <div class="header-logo-motion">
-            <a href="/">
-              <img src="./images/etc/logo-blog01.png" alt="블로그 이미지" />
-            </a>
+          <div class="swiper header-logo-motion">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog01.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog02.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog03.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog04.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog05.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog06.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog07.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog08.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog09.png" alt="motion logo" />
+              </div>
+            </div>
           </div>
         </div>
         <!-- 메뉴 및 검색창 -->
@@ -81,12 +116,33 @@
         <div class="main-slide">
           <!-- 왼쪽 슬라이드 -->
           <div class="left">
-            <!-- 교체 가능 -->
-            <div class="visual-slide">
-              <a href="#">
-                <img src="./images/b1.png" alt="배너이미지" />
-              </a>
+            <!-- @Start swiper slide -->
+            <div class="swiper visual-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b1.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b2.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b3.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b4.png" alt="배너이미지" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+            <!-- @End swiper slide -->
           </div>
           <!-- 오른쪽 슬라이드 -->
           <div class="right">
@@ -360,43 +416,86 @@
       <!-- 카드 슬라이드 -->
       <div class="mb-card-slide">
         <h4 class="list-title">폴더 📁</h4>
-        <div class="mb-card-slide-wrap">
-          <a href="#" class="list-card">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카테고리" />
+        <div class="swiper mb-card-slide-wrap">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <div class="card-name">AI Healthcare</div>
-              <div class="card-number">10</div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="#" class="list-card">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카테고리" />
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <div class="card-name">AI Healthcare</div>
-              <div class="card-number">10</div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="#" class="list-card">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카테고리" />
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <div class="card-name">AI Healthcare</div>
-              <div class="card-number">10</div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-          </a>
-          <a href="#" class="list-card">
-            <div class="card-img">
-              <img src="./images/p1.png" alt="카테고리" />
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
             </div>
-            <div class="card-info">
-              <div class="card-name">AI Healthcare</div>
-              <div class="card-number">10</div>
-            </div>
-          </a>
+          </div>
         </div>
         <div class="list-bt-wrap">
           <button id="bt-mb-more-card" class="bt">전체보기</button>
