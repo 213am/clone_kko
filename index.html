@@ -5,16 +5,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>내가 만드는 사이트</title>
+    <link
+      rel="icon"
+      href="./images/icon/cropped-main-shape-32x32.png"
+      type="image/x-icon"
+    />
+    <title>카카오브레인 Blog clone project</title>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" /> -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <!-- css 연결 -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main-slide.css" />
+    <link rel="stylesheet" href="./css/main-content.css" />
+    <link rel="stylesheet" href="./css/card-list.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <!-- javascript 연결 -->
+    <script src="./js/header.js"></script>
+    <script src="./js/slide-logo.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/slide-main.js"></script>
+    <script src="./js/slide-card.js"></script>
+    <script src="./js/footer.js"></script>
   </head>
-
   <body>
     <!-- 먼저 레이아웃을 잡기위해 주석작성 및 div 를 사용한다. -->
     <!-- div 는 레이아웃 용 이외에는 용도가 없다. -->
+
+    <!-- 반투명 배경 -->
+    <div class="bg-mb-menu"></div>
+
     <!-- 상단 영역 -->
     <header class="header">
       <div class="layout">
@@ -23,22 +54,61 @@
           <a href="/" class="header-logo-link">
             <img src="./images/etc/logo-kakao.png" alt="카카오블로그" />
           </a>
-          <div class="header-logo-motion">
-            <img src="./images/etc/logo-blog01.png" alt="블로그 이미지" />
+          <div class="swiper header-logo-motion">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog01.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog02.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog03.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog04.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog05.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog06.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog07.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog08.png" alt="motion logo" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/etc/logo-blog09.png" alt="motion logo" />
+              </div>
+            </div>
           </div>
         </div>
-
         <!-- 메뉴 및 검색창 -->
         <div class="navigation">
           <a href="#">소식</a>
           <a href="#">팀 & 크루</a>
           <a href="#">영입</a>
           <button id="search">
-            <img src="./images/icon/icon-search.png" alt="" />
+            <img src="./images/icon/icon-search.png" alt="검색버튼" />
+          </button>
+          <!-- 모바일 메뉴 -->
+          <button id="mb-menu-bt">
+            <img src="./images/icon/icon-hbr.png" alt="모바일메뉴" />
           </button>
         </div>
       </div>
     </header>
+    <!-- 모바일용 메뉴 -->
+    <div class="mb-menu">
+      <div class="layout">
+        <a href="#">소식</a>
+        <a href="#">팀 & 크루</a>
+        <a href="#">영입</a>
+      </div>
+    </div>
     <!-- 메인 영역 -->
     <main class="main">
       <div class="layout">
@@ -46,14 +116,34 @@
         <div class="main-slide">
           <!-- 왼쪽 슬라이드 -->
           <div class="left">
-            <!-- 교체 가능 -->
-            <div class="visual-slide">
-              <a href="#">
-                <img src="./images/b1.png" alt="배너이미지" />
-              </a>
+            <!-- @Start swiper slide -->
+            <div class="swiper visual-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b1.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b2.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b3.png" alt="배너이미지" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <img src="./images/b4.png" alt="배너이미지" />
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+            <!-- @End swiper slide -->
           </div>
-
           <!-- 오른쪽 슬라이드 -->
           <div class="right">
             <div class="card-slide">
@@ -250,36 +340,243 @@
             <!-- 카드 전체 목록 -->
             <div class="list-card-wrap">
               <h4 class="list-title">폴더 📁</h4>
+              <!-- @Start card -->
               <a href="#" class="list-card">
-                <div class="list-img">
+                <div class="card-img">
                   <img src="./images/p1.png" alt="카테고리" />
                 </div>
-                <div class="list-cate">
-                  <div class="list-name">AI Healthcare</div>
-                  <div class="list-number">10</div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+              <!-- @End card -->
+              <!-- @Start card -->
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+              <!-- @End card -->
+              <!-- @Start card -->
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+              <!-- @End card -->
+              <!-- @Start card -->
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+              <!-- @End card -->
+              <!-- @Start card -->
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+              <!-- @End card -->
+              <!-- @Start card -->
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+              <!-- @End card -->
+              <div class="list-bt-wrap">
+                <button id="bt-more-card" class="bt">전체보기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 카드 슬라이드 -->
+      <div class="mb-card-slide">
+        <h4 class="list-title">폴더 📁</h4>
+        <div class="swiper mb-card-slide-wrap">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="list-card">
+                <div class="card-img">
+                  <img src="./images/p1.png" alt="카테고리" />
+                </div>
+                <div class="card-info">
+                  <div class="card-name">AI Healthcare</div>
+                  <div class="card-number">10</div>
                 </div>
               </a>
             </div>
           </div>
         </div>
+        <div class="list-bt-wrap">
+          <button id="bt-mb-more-card" class="bt">전체보기</button>
+        </div>
       </div>
     </main>
     <!-- 하단 영역 -->
     <footer class="footer">
-      <!-- 사이트맵 -->
+      <!-- @Start 사이트맵 -->
       <div class="footer-main">
         <div class="layout">
-          <div class="left"></div>
-          <div class="right"></div>
+          <div class="left">
+            <div class="footer-logo">
+              <a href="#">
+                <img
+                  src="./images/etc/logo-kakao-footer.png"
+                  alt="kakaobrain"
+                />
+              </a>
+            </div>
+            <div class="footer-text">
+              카카오브레인의 혁신은 모든 크루의 물음에서 시작합니다.<br />
+              AI 없이는 상상할 수 없는 세상을 만들기 위해선 생각하지 못한 많은
+              물음이 필요합니다.<br />
+              세상을 변화시킬 수 있는 새로운 물음을 던질 크루를 기다립니다.
+            </div>
+            <div class="footer-link">
+              <!-- <a target="_blank"></a> 는 새탭에서 링크 열기 -->
+              <a href="#" target="_blank">
+                <div>지원하러 가기</div>
+              </a>
+            </div>
+          </div>
+          <div class="right">
+            <ul class="site-map-list">
+              <li><b>정보</b></li>
+              <li>
+                <a href="#" class="page">
+                  영입페이지
+                  <i class="xi-arrow-up rot-icon"></i>
+                </a>
+              </li>
+              <li><a href="#">이메일무단수집거부</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+            <ul class="site-map-list">
+              <li><b>문의</b></li>
+              <li><a href="#">영입</a></li>
+              <li><a href="#">PR</a></li>
+              <li><a href="#">마케팅∙사업제휴</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <!-- copyright -->
+      <!-- @End 사이트맵 -->
+      <!-- @Start copyright -->
       <div class="footer-copy">
         <div class="layout">
-          <div class="left"></div>
-          <div class="right"></div>
+          <div class="left">
+            <span class="copy">Kakao Brain Corp. @ All rights reserved.</span>
+          </div>
+          <div class="right">
+            <ul class="sns">
+              <li>
+                <a href="#" class="linkedin"><i class="xi-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#" class="youtube"><i class="xi-youtube-play"></i></a>
+              </li>
+              <li>
+                <a href="#" class="github"><i class="xi-github"></i></a>
+              </li>
+              <li>
+                <a href="#" class="facebook"><i class="xi-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <!-- @End copyright -->
     </footer>
   </body>
 </html>

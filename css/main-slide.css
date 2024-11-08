@@ -1,0 +1,135 @@
+.main-slide {
+  display: flex;
+  /* 30/1180 * 100 = 2.542... */
+  gap: 2.542vw;
+  /* padding-top: 10px; */
+}
+
+/* 왼쪽 영역  */
+.main-slide .left {
+  /* 770/1180 * 100 = 65.254... */
+  width: 65.254vw;
+  max-width: 770px;
+  /* 470/1180 * 100 - 39.830... */
+  /* width 대비 height 를 계산하기 위해서 vh 가 아닌 vw 를 사용 */
+  height: 39.83vw;
+  max-height: 470px;
+}
+.visual-slide {
+  width: 100%;
+  height: 100%;
+  /* 테두리를 둥글게 */
+  border-radius: 20px;
+  /* 넘치는 부분은 숨겨라 */
+  overflow: hidden;
+}
+/* visual-slide 태그 안의 a 태그 */
+/* a 태그에는 대부분의 스타일시트가 안 먹힘 */
+/* 이유는 display:inline; 이 기본설정이기 때문에 */
+.visual-slide a {
+  width: 100%;
+  height: 100%;
+}
+/* visual-slide 태그 안의 a 태그 안의 img 태그*/
+.visual-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-slide .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  margin: 0 2px;
+  opacity: 0.7;
+}
+.visual-slide .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  width: 20px;
+  border-radius: 5px;
+  opacity: 1 !important;
+}
+
+/* 오른쪽 영역 */
+.main-slide .right {
+  /* 370/1180 * 100 = 31.355... */
+  width: 31.355vw;
+  max-width: 370px;
+  /* 470/1180 * 100 = 39.830... */
+  height: 39.83vw;
+  max-height: 470px;
+}
+.card-slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* card-slide 태그 안의 a 태그*/
+.card-slide a {
+  width: 100%;
+  height: 100%;
+}
+/* card-slide 태그 안의 a 태그 안의 img 태그*/
+.card-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 하단 카드 슬라이드 */
+.mb-card-slide {
+  display: none;
+  margin-top: 60px;
+  overflow: hidden;
+}
+.mb-card-slide .swiper {
+  overflow: visible;
+}
+
+/* js 로 변경 예정 */
+.mb-card-slide-wrap {
+  display: flex;
+  width: 1400px;
+}
+.mb-card-slide-wrap a {
+}
+.mb-card-slide-wrap .swiper-slide {
+  max-width: 265px;
+}
+.mb-card-slide-wrap .swiper-slide-active {
+  max-width: 265px;
+}
+
+/* main-slide 반응형 */
+@media screen and (max-width: 1024px) {
+  .main-slide {
+    display: block;
+    gap: 0;
+    width: 100%;
+  }
+  .main-slide .left {
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    max-height: 100%;
+  }
+  .main-slide .right {
+    display: none;
+  }
+
+  .mb-card-slide {
+    display: block;
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  .mb-card-slide-wrap .list-card {
+    display: block;
+    width: 240px;
+    height: 266px;
+  }
+}
