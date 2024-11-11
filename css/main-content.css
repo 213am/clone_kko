@@ -62,16 +62,11 @@
   width: 24px;
   height: 24px;
 }
-.thum-cate .AI {
-  color: rgb(119, 56, 255);
+.thum-cate > span {
   font-weight: 600;
   font-size: 14px;
 }
-.thum-cate .Krew {
-  color: rgb(231, 0, 167);
-  font-weight: 600;
-  font-size: 14px;
-}
+
 .thum-title {
   color: rgb(30, 30, 30);
   font-weight: 700;
@@ -111,6 +106,8 @@
 }
 
 .list-thum-wrap {
+}
+.list-thum-wrap .list {
 }
 
 .list-bt-wrap {
