@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
       const headerLogo = new Swiper(".header-logo-motion", {
         loop: true,
         autoplay: {
-          delay: 3000,
+          delay: 2500,
           disableOnInteraction: false,
         },
         speed: 700,
@@ -43,6 +43,17 @@ window.addEventListener("load", function () {
         fadeEffect: {
           crossFade: true,
         },
+      });
+      // 추가 1: 일단 멈춘 상태로
+      headerLogo.autoplay.stop();
+      // 추가 2: 마우스를 올리면 다시 플레이
+      headerLogoTag.addEventListener("mouseenter", function () {
+        headerLogo.autoplay.start();
+      });
+      headerLogoTag.addEventListener("mouseleave", function () {
+        headerLogo.autoplay.stop();
+        // 추가 3: 마우스가 떠나면 다시 첫 슬라이드로
+        headerLogo.slideToLoop(0);
       });
     })
     .catch(function (error) {
