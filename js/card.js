@@ -9,11 +9,10 @@ window.addEventListener("load", function () {
       return result;
     })
     .then(function (result) {
-      // console.log("카드 결과: ", result);
-      let htmlMbCard = "";
+      //   console.log("카드 결과: ", result);
+      let htmlCard = "";
       for (let i = 0; i < 5; i++) {
         const tag = `
-        <div class="swiper-slide">
             <a href="${result[i].link}" class="list-card">
                 <div class="card-img">
                     <img src="./images/${result[i].imgpath}" alt="${result[i].cardname}" />
@@ -23,19 +22,14 @@ window.addEventListener("load", function () {
                     <div class="card-number">${result[i].cardno}</div>
                 </div>
             </a>
-        </div>`;
+       `;
         // console.log(tag);
-        htmlMbCard += tag;
+        htmlCard += tag;
       }
       //   console.log(htmlCard);
-      const htmlMbCardTag = document.querySelector("#mb-card-api");
+      const htmlCardTag = document.querySelector("#card-api");
       //   console.log(htmlCardTag);
-      htmlMbCardTag.innerHTML = htmlMbCard;
-
-      const mbCardSlide = new Swiper(".mb-card-slide-wrap", {
-        slidesPerView: 4,
-        loop: true,
-      });
+      htmlCardTag.innerHTML = htmlCard;
     })
     .catch(function () {});
 });

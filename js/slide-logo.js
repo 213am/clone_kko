@@ -16,33 +16,36 @@ window.addEventListener("load", function () {
     })
     .then(function (result) {
       // 1. json 뜯기
-      console.log(result);
+      // console.log(result);
       // 2. 반복해서 html 태그를 생성
       let logoHtml = "";
       for (let i = 0; i < 9; i++) {
-        const data = `<div class="swiper-slide"><img src="${result[i].imgUrl}" alt="${result[i].desc}" /></div>`;
+        const data = `<div class="swiper-slide"><img src="./images/etc/${result[i].imgUrl}" alt="${result[i].desc}" /></div>`;
         logoHtml += data;
       }
-      console.log(logoHtml);
+      // console.log(logoHtml);
       // 3. 생성된 html 을 원하는 곳에 배치
+      const headerLogoTag = document.querySelector(
+        ".header-logo-motion .swiper-wrapper"
+      );
+      // console.log(headerLogoTag);
+      headerLogoTag.innerHTML = logoHtml;
       // 4. swiper 생성 및 실행
+      const headerLogo = new Swiper(".header-logo-motion", {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        speed: 700,
+        effect: "fade",
+        // fade 겹치지 않게
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
     })
     .catch(function (error) {
       console.log(error);
     });
-  // const logoData;
-
-  const headerLogo = new Swiper(".header-logo-motion", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    speed: 700,
-    effect: "fade",
-    // fade 겹치지 않게
-    fadeEffect: {
-      crossFade: true,
-    },
-  });
 });
