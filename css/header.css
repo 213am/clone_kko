@@ -99,12 +99,13 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .bg-mb-menu-active {
   /* display: block !important; */
   visibility: visible !important;
   opacity: 1;
+  z-index: 999;
 }
 
 .mb-menu {
@@ -120,7 +121,7 @@
   overflow: hidden;
 
   transition: all 0.2s ease-in;
-  transition-delay: 0.15s;
+  transition-delay: 0.1s;
 }
 .mb-menu-active {
   height: 160px !important;
