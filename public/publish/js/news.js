@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   // api 주소(/apis/news.json) 를 request
-  const NEWS_DATA_URL = "./apis/news.json";
+  const NEWS_DATA_URL = "/apis/news.json";
   // 연산 처리 : html 생성
   fetch(NEWS_DATA_URL)
     .then(function (response) {
@@ -20,11 +20,11 @@ window.addEventListener("load", function () {
         const tag = `
         <a href="${result[i].link}" class="thum">
             <div class="thum-img">
-                <img src="./images/${result[i].imgpath}" alt="${result[i].category}" />
+                <img src="/images/${result[i].imgpath}" alt="${result[i].category}" />
             </div>
             <div class="thum-cate">
                 <img
-                src="./images/icon/${result[i].icon}"
+                src="/images/icon/${result[i].icon}"
                 alt="${result[i].category}"
                 />
                 <span style="color:${result[i].txtcolor}">${result[i].category}</span>

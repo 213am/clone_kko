@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  const EDITORS_DATA_URL = "./apis/editors.json";
+  const EDITORS_DATA_URL = "/apis/editors.json";
   //   console.log(EDITORS_DATA_URL);
 
   fetch(EDITORS_DATA_URL)
@@ -19,11 +19,11 @@ window.addEventListener("load", function () {
         editorsHtml += `
             <a href="${obj.link}" class="thum">
                 <div class="thum-img">
-                    <img src="./images/${obj.imgpath}" alt="${obj.category}" />
+                    <img src="/images/${obj.imgpath}" alt="${obj.category}" />
                 </div>
                 <div class="thum-cate">
                     <img
-                    src="./images/icon/${obj.icon}"
+                    src="/images/icon/${obj.icon}"
                     alt="${obj.category}"
                     />
                     <h4 style="color:${obj.txtcolor}">${obj.category}</h4>

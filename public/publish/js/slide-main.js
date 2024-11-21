@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  const SLIDE_DATA_URL = "./apis/mainSlide.json";
+  const SLIDE_DATA_URL = "/apis/mainSlide.json";
 
   fetch(SLIDE_DATA_URL)
     .then(function (response) {
@@ -18,7 +18,7 @@ window.addEventListener("load", function () {
         const tag = `
           <div class="swiper-slide" pc-active="${obj.pc}" mb-active="${obj.mb}">
             <a href="${obj.url}">
-              <img src="./images/${obj.pic}" alt="${obj.title}" />
+              <img src="/images/${obj.pic}" alt="${obj.title}" />
               <span class="slide-title">${obj.title}</span>
             </a>
           </div>
