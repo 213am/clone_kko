@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  const CARD_DATA_URL = "./apis/cards.json";
+  const CARD_DATA_URL = "apis/cards.json";
 
   fetch(CARD_DATA_URL)
     .then(function (response) {
@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
         const tag = `
             <a href="${result[i].link}" class="list-card">
                 <div class="card-img">
-                    <img src="./images/${result[i].imgpath}" alt="${result[i].cardname}" />
+                    <img src="/images/${result[i].imgpath}" alt="${result[i].cardname}" />
                 </div>
                 <div class="card-info">
                     <div class="card-name">${result[i].cardname}</div>

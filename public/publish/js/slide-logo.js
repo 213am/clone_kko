@@ -1,6 +1,6 @@
 $(window).ready(function () {
   // api 주소 > json 주소가 어디인지 찾기
-  var LOGO_DATA_URL = "./apis/logodata.json";
+  var LOGO_DATA_URL = "/apis/logodata.json";
   // API 를 통한 데이터 불러오기 : request
   // API 를 통해 불러온 결과물 : response
   $.ajax({
@@ -21,7 +21,7 @@ $(window).ready(function () {
         data += result[i].desc;
         data += "' />";
         data += "</div>";
-        // `<div class="swiper-slide"><img src="./images/etc/${result[i].imgUrl}" alt="${result[i].desc}" /></div>`;
+        // `<div class="swiper-slide"><img src="/images/etc/${result[i].imgUrl}" alt="${result[i].desc}" /></div>`;
         logoHtml += data;
       }
       // 3. 생성된 html 을 원하는 곳에 배치
@@ -67,7 +67,7 @@ $(window).ready(function () {
       // 2. 반복해서 html 태그를 생성
       let logoHtml = "";
       for (let i = 0; i < 9; i++) {
-        const data = `<div class="swiper-slide"><img src="./images/etc/${result[i].imgUrl}" alt="${result[i].desc}" /></div>`;
+        const data = `<div class="swiper-slide"><img src="/images/etc/${result[i].imgUrl}" alt="${result[i].desc}" /></div>`;
         logoHtml += data;
       }
       // 3. 생성된 html 을 원하는 곳에 배치
