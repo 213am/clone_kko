@@ -1,0 +1,18 @@
+/* 메인 영역 */
+.main {
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 상하여백(0px) 좌우여백(auto) */
+  margin: 0px auto;
+  min-height: 600px;
+  margin-bottom: 60px;
+  margin-top: 100px;
+}
+
+.main .layout {
+  padding: 0px 15px;
+  margin: 0px auto;
+  max-width: 1180px;
+  justify-content: space-between;
+}
