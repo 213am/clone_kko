@@ -109,7 +109,7 @@ export const Header = () => {
       <header className={isScroll ? "header header-b-line" : "header"}>
         <div className="inner space-between align-items-center">
           <a
-            href="#"
+            href="/"
             aria-label="카카오브레인 블로그"
             className="logo space-between"
             ref={swLogTag}
